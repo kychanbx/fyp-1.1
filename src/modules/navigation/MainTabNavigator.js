@@ -99,17 +99,6 @@ export default createBottomTabNavigator(
         ),
       },
     },
-    Components: {
-      screen: ComponentsScreen,
-      navigationOptions: {
-        header: (
-          <View style={styles.headerContainer}>
-            <Image style={styles.headerImage} source={hederBackground} />
-            <Text style={styles.headerCaption}>Components</Text>
-          </View>
-        ),
-      },
-    },
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
