@@ -96,7 +96,7 @@ export default class AuthScreen extends React.Component {
                 this.state.isKeyboardVisible && { height: 90 },
                 this.fadeIn(0),
               ]}
-              source={require('../../../assets/images/white-logo.png')}
+              // source={require('../../../assets/images/white-logo.png')}
             />
           </View>
 
@@ -141,7 +141,7 @@ export default class AuthScreen extends React.Component {
                 onPress={() => this.props.navigation.goBack()}
               />
 
-              {!this.state.isKeyboardVisible && (
+              {/* {!this.state.isKeyboardVisible && (
                 <View style={styles.socialLoginContainer}>
                   <Button
                     style={styles.socialButton}
@@ -165,7 +165,7 @@ export default class AuthScreen extends React.Component {
                     onPress={() => this.props.navigation.goBack()}
                   />
                 </View>
-              )}
+              )} */}
 
               {!this.state.isKeyboardVisible && (
                 <TouchableOpacity

@@ -13,7 +13,7 @@ export default function PagesScreen(props) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Charts' })}
           style={styles.item}
         >
@@ -23,8 +23,8 @@ export default function PagesScreen(props) {
             style={styles.itemImage}
           />
           <Text style={styles.itemText}>Charts</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Gallery' })}
           style={styles.item}
         >
@@ -34,7 +34,7 @@ export default function PagesScreen(props) {
             style={styles.itemImage}
           />
           <Text style={styles.itemText}>Gallery</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Profile' })}
           style={styles.item}
@@ -48,7 +48,7 @@ export default function PagesScreen(props) {
         </TouchableOpacity>
       </View>
       <View style={styles.row}>
-        <TouchableOpacity
+        {/* <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Chat' })}
           style={styles.item}
         >
@@ -58,8 +58,8 @@ export default function PagesScreen(props) {
             style={styles.itemImage}
           />
           <Text style={styles.itemText}>Chats</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Calendar' })}
           style={styles.item}
         >
@@ -69,7 +69,7 @@ export default function PagesScreen(props) {
             style={styles.itemImage}
           />
           <Text style={styles.itemText}>Calendar</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
         <TouchableOpacity
           onPress={() => props.navigation.navigate({ routeName: 'Auth' })}
           style={styles.item}

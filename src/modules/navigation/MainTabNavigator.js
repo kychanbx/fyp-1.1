@@ -10,12 +10,14 @@ import CalendarScreen from '../calendar/CalendarViewContainer';
 import GridsScreen from '../grids/GridsViewContainer';
 import PagesScreen from '../pages/PagesViewContainer';
 import ComponentsScreen from '../components/ComponentsViewContainer';
+import ChatScreen from '../chat/ChatViewContainer';
 
 const iconHome = require('../../../assets/images/tabbar/home.png');
 const iconCalendar = require('../../../assets/images/tabbar/calendar.png');
 const iconGrids = require('../../../assets/images/tabbar/grids.png');
 const iconPages = require('../../../assets/images/tabbar/pages.png');
 const iconComponents = require('../../../assets/images/tabbar/components.png');
+const chatIcon = require('../../../assets/images/pages/chat.png');
 
 const hederBackground = require('../../../assets/images/topBarBg.png');
 
@@ -59,21 +61,9 @@ const styles = StyleSheet.create({
 export default createBottomTabNavigator(
   {
     Home: {
-      screen: HomeScreen,
-      navigationOptions: {
-        header: null,
-      },
-    },
-    // Grids: {
-    Grids: {
       screen: GridsScreen,
       navigationOptions: {
-        header: (
-          <View style={styles.headerContainer}>
-            <Image style={styles.headerImage} source={hederBackground} />
-            <Text style={styles.headerCaption}>Grids</Text>
-          </View>
-        ),
+        header: null,
       },
     },
     Calendar: {
@@ -87,8 +77,18 @@ export default createBottomTabNavigator(
         ),
       },
     },
-
-    Pages: {
+    Chats: {
+      screen: ChatScreen,
+      navigationOptions: {
+        header: (
+          <View style={styles.headerContainer}>
+            <Image style={styles.headerImage} source={hederBackground} />
+            <Text style={styles.headerCaption}>Grids</Text>
+          </View>
+        ),
+      },
+    },
+    Settings: {
       screen: PagesScreen,
       navigationOptions: {
         header: (
@@ -99,6 +99,17 @@ export default createBottomTabNavigator(
         ),
       },
     },
+    // Components: {
+    //   screen: ComponentsScreen,
+    //   navigationOptions: {
+    //     header: (
+    //       <View style={styles.headerContainer}>
+    //         <Image style={styles.headerImage} source={hederBackground} />
+    //         <Text style={styles.headerCaption}>Components</Text>
+    //       </View>
+    //     ),
+    //   },
+    // },
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -113,10 +124,10 @@ export default createBottomTabNavigator(
           case 'Calendar':
             iconSource = iconCalendar;
             break;
-          case 'Grids':
-            iconSource = iconGrids;
+          case 'Chats':
+            iconSource = chatIcon;
             break;
-          case 'Pages':
+          case 'Settings':
             iconSource = iconPages;
             break;
           case 'Components':
